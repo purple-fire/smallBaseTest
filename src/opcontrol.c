@@ -39,14 +39,15 @@
 #define DRIVE_LEFT_MIDDLE 2
 #define DRIVE_LEFT_FRONT 1
 
-#define DRIVE_RIGHT_BACK 8
-#define DRIVE_RIGHT_MIDDLE 9
-#define DRIVE_RIGHT_FRONT 10
+#define DRIVE_RIGHT_BACK 7
+#define DRIVE_RIGHT_MIDDLE 8
+#define DRIVE_RIGHT_FRONT 9
 
 
 void operatorControl() {
 
-	setMotorReversed(DRIVE_LEFT_MIDDLE, true);
+	setMotorReversed(DRIVE_LEFT_BACK, true);
+
 	setMotorReversed(DRIVE_RIGHT_BACK, true);
 	setMotorReversed(DRIVE_RIGHT_FRONT, true);
 
@@ -56,11 +57,11 @@ void operatorControl() {
 
 		setMotorSpeed(DRIVE_LEFT_BACK, leftStick);
 		setMotorSpeed(DRIVE_LEFT_MIDDLE, leftStick);
-		setMotorSpeed(DRIVE_LEFT_FRONT, leftStick);
+		setMotorSpeed(DRIVE_LEFT_FRONT, (leftStick/(sqrt(2))));
 
 		setMotorSpeed(DRIVE_RIGHT_BACK, rightStick);
 		setMotorSpeed(DRIVE_RIGHT_MIDDLE, rightStick);
-		setMotorSpeed(DRIVE_RIGHT_FRONT, rightStick);
+		setMotorSpeed(DRIVE_RIGHT_FRONT, (rightStick/(sqrt(2))));
 
 		delay(20);
 	}

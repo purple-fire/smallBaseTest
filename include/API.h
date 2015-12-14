@@ -43,6 +43,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdarg.h>
+#include <math.h>
 
 // Begin C++ extern to C
 #ifdef __cplusplus
